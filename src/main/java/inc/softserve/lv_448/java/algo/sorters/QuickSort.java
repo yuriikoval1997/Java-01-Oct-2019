@@ -3,7 +3,7 @@ package inc.softserve.lv_448.java.algo.sorters;
 import java.util.Comparator;
 import java.util.List;
 
-public class QuickSort<T> extends Sort<T> {
+public class QuickSort<T> extends AbstractSort<T> {
 
     public QuickSort(){
         super(null);

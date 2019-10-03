@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @SuppressWarnings("WeakerAccess")
-public class MergeSort<T> extends Sort<T> {
+public class MergeSort<T> extends AbstractSort<T> {
 
     public MergeSort() {
         super(null);

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @SuppressWarnings("WeakerAccess")
-public class InsertionSort<T> extends Sort<T> {
+public class InsertionSort<T> extends AbstractSort<T> {
 
     public InsertionSort(){
         super(null);

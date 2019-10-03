@@ -2,7 +2,6 @@ package inc.softserve.lv_448.java.algo.sorters;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 class SortTest {
