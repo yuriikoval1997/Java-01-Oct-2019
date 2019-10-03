@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 class SortTest {
 
-    Sort sort;
+    AbstractSort abstractSort;
 
     @SuppressWarnings("unused")
     static Stream<TestData> supplyTestData(){
