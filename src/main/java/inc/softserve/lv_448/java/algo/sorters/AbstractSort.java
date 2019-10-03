@@ -15,7 +15,7 @@ public abstract class AbstractSort<T> implements Sort<T> {
     @SuppressWarnings("unchecked")
     protected int compare(T t1, T t2){
         if (this.comparator == null){
-            return ((Comparable) t1).compareTo((Comparable) t2);
+            return ((Comparable) t1).compareTo(t2);
         }
         return comparator.compare(t1, t2);
     }
