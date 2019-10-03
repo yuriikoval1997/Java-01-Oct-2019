@@ -23,14 +23,4 @@ class QuickSortTest extends SortTest {
         sort.accept(testData.actual);
         assertArrayEquals(testData.expected, testData.actual);
     }
-
-    @SuppressWarnings("unused")
-    static Stream<InsertionSortTest.TestData> supplyTestData(){
-        List<InsertionSortTest.TestData> tests = new ArrayList<>();
-        tests.add(new TestData(new int[]{64, 34, 25, 12, 22, 11, 90, 87}, new int[]{11, 12, 22, 25, 34, 64, 87, 90}));
-        tests.add(new TestData(new int[]{11, 12, 22, 25, 34, 64, 87, 90}, new int[]{11, 12, 22, 25, 34, 64, 87, 90}));
-        tests.add(new TestData(new int[]{90, 87, 64, 34, 25, 22, 12, 11}, new int[]{11, 12, 22, 25, 34, 64, 87, 90}));
-        tests.add(new TestData(new int[]{64, 34, 25, 12, 22, 11, 90, 87, 0}, new int[]{0, 11, 12, 22, 25, 34, 64, 87, 90}));
-        return tests.stream();
-    }
 }
