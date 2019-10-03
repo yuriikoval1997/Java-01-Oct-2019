@@ -1,7 +1,5 @@
 package inc.softserve.lv_448.java.algo.sorters;
 
-import java.util.Arrays;
-
 public class InsertionSort implements Sort {
 
     @Override
@@ -15,12 +13,5 @@ public class InsertionSort implements Sort {
             }
             arr[j+1] = key;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] x = new int[]{64, 34, 25, 12, 22, 11, 90, 87};
-        Sort sort = new InsertionSort();
-        sort.accept(x);
-        System.out.println(Arrays.toString(x));
     }
 }

@@ -1,19 +1,6 @@
 package inc.softserve.lv_448.java.algo.sorters;
 
-import java.util.Arrays;
-
 public class MergeSort implements Sort {
-
-    public static void main(String[] args) {
-        Sort mergeSort = new MergeSort();
-        int[] x = new int[]{64, 34, 25, 12, 22, 11, 90, 87};
-        mergeSort.accept(x);
-        System.out.println(Arrays.toString(x));
-
-        int[] y = new int[]{64, 34, 25, 12, 22, 11, 90, 87, 25};
-        mergeSort.accept(y);
-        System.out.println(Arrays.toString(y));
-    }
 
     @Override
     public void accept(int[] arr) {

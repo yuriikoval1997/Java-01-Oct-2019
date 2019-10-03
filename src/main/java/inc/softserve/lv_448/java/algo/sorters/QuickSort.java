@@ -1,15 +1,6 @@
 package inc.softserve.lv_448.java.algo.sorters;
 
-import java.util.Arrays;
-
 public class QuickSort implements Sort {
-
-    public static void main(String[] args) {
-        Sort qu = new QuickSort();
-        int[] x = new int[]{64, 34, 25, 12, 22, 11, 90, 87};
-        qu.accept(x);
-        System.out.println(Arrays.toString(x));
-    }
 
     @Override
     public void accept(int[] arr) {
