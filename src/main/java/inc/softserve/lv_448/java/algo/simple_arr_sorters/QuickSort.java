@@ -1,24 +1,13 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
-import java.util.Comparator;
-import java.util.List;
-
-public class QuickSort<T> extends AbstractSort<T> {
-
-    public QuickSort(){
-        super(null);
-    }
-
-    public QuickSort(Comparator<T> comparator) {
-        super(comparator);
-    }
+public class QuickSort implements Sort {
 
     @Override
-    public void accept(List<T> arr) {
-        quicksort(arr, 0, arr.size() - 1);
+    public void accept(int[] arr) {
+        quicksort(arr, 0, arr.length - 1);
     }
 
-    private void quicksort(List<T> arr, int l, int r) {
+    private void quicksort(int[] arr, int l, int r) {
         if (l >= r){
             return;
         }
@@ -27,20 +16,20 @@ public class QuickSort<T> extends AbstractSort<T> {
         quicksort(arr, p + 1, r);
     }
 
-    private int partition(List<T> arr, int l, int r) {
+    private int partition(int[] arr, int l, int r) {
         int m = (l + r)/2;
-        T pivot = arr.get(m);
+        int pivot = arr[m];
         while (l < r){
-            while (compare(arr.get(l), pivot) < 1){
+            while (arr[l] < pivot){
                 l++;
             }
-            while (compare(arr.get(l), pivot) > 1){
+            while (arr[r] > pivot){
                 r--;
             }
             if (l < r){
-                T tmp = arr.get(l);
-                arr.set(l, arr.get(r));
-                arr.set(r, tmp);
+                int tmp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = tmp;
             }
         }
         return l;
