@@ -33,14 +33,4 @@ class InsertionSortTest extends SortTest{
         tests.add(new TestData(new int[]{64, 34, 25, 12, 22, 11, 90, 87, 0}, new int[]{0, 11, 12, 22, 25, 34, 64, 87, 90}));
         return tests.stream();
     }
-
-    static class TestData{
-        final int[] actual;
-        final int[] expected;
-
-        TestData(int[] actual, int[] expected) {
-            this.actual = actual;
-            this.expected = expected;
-        }
-    }
 }
