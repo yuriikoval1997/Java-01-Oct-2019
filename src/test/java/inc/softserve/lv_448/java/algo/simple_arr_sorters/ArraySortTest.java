@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-class SortTest {
+class ArraySortTest {
 
-    AbstractSort abstractSort;
+    ArraySort arraySort;
 
     @SuppressWarnings("unused")
     static Stream<TestData> supplyTestData(){

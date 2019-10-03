@@ -1,6 +1,6 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
-public class InsertionAbstractSort implements AbstractSort {
+public class InsertionArraySort implements ArraySort {
 
     @Override
     public void accept(int[] arr) {
