@@ -6,17 +6,17 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class QuickAbstractSortTest extends SortTest {
+class InsertionArraySortTest extends ArraySortTest {
 
     @BeforeEach
     void setUp() {
-        abstractSort = new InsertionAbstractSort();
+        arraySort = new InsertionArraySort();
     }
 
     @ParameterizedTest
     @MethodSource("supplyTestData")
-    void accept(InsertionAbstractSortTest.TestData testData) {
-        abstractSort.accept(testData.actual);
+    void accept(TestData testData) {
+        arraySort.accept(testData.actual);
         assertArrayEquals(testData.expected, testData.actual);
     }
 }
