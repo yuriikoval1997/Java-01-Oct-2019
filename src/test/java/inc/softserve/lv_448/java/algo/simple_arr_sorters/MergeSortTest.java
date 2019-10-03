@@ -1,4 +1,4 @@
-package inc.softserve.lv_448.java.algo.sorters;
+package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
