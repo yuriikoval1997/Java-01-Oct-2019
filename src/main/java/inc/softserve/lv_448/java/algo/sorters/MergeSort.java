@@ -1,46 +1,57 @@
 package inc.softserve.lv_448.java.algo.sorters;
 
-public class MergeSort implements Sort {
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+@SuppressWarnings("WeakerAccess")
+public class MergeSort<T> extends Sort<T> {
+
+    public MergeSort() {
+        super(null);
+    }
+
+    public MergeSort(Comparator<T> comparator){
+        super(comparator);
+    }
 
     @Override
-    public void accept(int[] arr) {
+    public void accept(List<T> arr) {
         divide(arr);
     }
 
-    private void divide(int[] arr){
-        if (arr.length <= 1){
+    private void divide(List<T> arr){
+        if (arr.size() <= 1){
             return;
         }
-        int m = arr.length / 2;
-        int[] left = new int[m];
-        int[] right = new int[arr.length - m];
-        System.arraycopy(arr, 0, left, 0, left.length);
-        System.arraycopy(arr, m, right, 0, right.length);
+        int m = arr.size() / 2;
+        List<T> left = new ArrayList<>(arr.subList(0, m));
+        List<T> right = new ArrayList<>(arr.subList(m, arr.size()));
         divide(left);
         divide(right);
         merge(left, right, arr);
     }
 
-    private void merge(int[] left, int[] right, int[] common){
+    private void merge(List<T> left, List<T> right, List<T> common){
         int l = 0;
         int r = 0;
         int c = 0;
-        while (l < left.length && r < right.length){
-            if (left[l] < right[r]){
-                common[c] = left[l];
+        while (l < left.size() && r < right.size()){
+            if (compare(left.get(l), right.get(r)) < 0){
+                common.set(c, left.get(l));
                 c++;
                 l++;
             } else {
-                common[c] = right[r];
+                common.set(c, right.get(r));
                 c++;
                 r++;
             }
         }
-        while (l < left.length){
-            common[c++] = left[l++];
+        while (l < left.size()){
+            common.set(c++, left.get(l++));
         }
-        while (r < right.length){
-            common[c++] = right[r++];
+        while (r < right.size()){
+            common.set(c++, right.get(r++));
         }
     }
 }

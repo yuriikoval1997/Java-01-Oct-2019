@@ -1,17 +1,29 @@
 package inc.softserve.lv_448.java.algo.sorters;
 
-public class InsertionSort implements Sort {
+import java.util.Comparator;
+import java.util.List;
+
+@SuppressWarnings("WeakerAccess")
+public class InsertionSort<T> extends Sort<T> {
+
+    public InsertionSort(){
+        super(null);
+    }
+
+    public InsertionSort(Comparator<T> comparator) {
+        super(comparator);
+    }
 
     @Override
-    public void accept(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            int key = arr[i];
+    public void accept(List<T> arr) {
+        for (int i = 1; i < arr.size(); i++) {
+            T key = arr.get(i);
             int j = i - 1;
-            while (j >= 0 && arr[j] > key){
-                arr[j+1] = arr[j];
+            while (j >= 0 && compare(arr.get(j), key) > 0){
+                arr.set(j+1, arr.get(j));
                 j--;
             }
-            arr[j+1] = key;
+            arr.set(j+1, key);
         }
     }
 }
