@@ -23,6 +23,7 @@ public class ConsoleReader implements AutoCloseable{
      */
     public List<Integer> readIntegers(){
         while (true){
+            System.out.println("Please, enter space separated integers:");
             try {
                 String line = bufferedReader.readLine().trim();
                 if (line.equals("exit")){
@@ -48,7 +49,17 @@ public class ConsoleReader implements AutoCloseable{
      * @return an integer
      */
     public int readInt(){
-        return readIntegers().get(0);
+        while (true){
+            System.out.println("Please, enter an integer:");
+            try {
+                return Integer.parseInt(bufferedReader.readLine());
+            } catch (NumberFormatException nfe){
+                System.out.println("You entered not a number. Try again!");
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     /**
