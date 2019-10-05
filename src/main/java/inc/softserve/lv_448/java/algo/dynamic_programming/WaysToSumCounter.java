@@ -2,7 +2,25 @@ package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import java.util.List;
 
+/**
+ * Class for counting the number of ways to
+ * sum to N using given integers
+ *
+ * @author Oleh Kopylchak
+ */
 public class WaysToSumCounter {
+    /**
+     * Method that count ways to sum to n
+     *
+     * @param possibleNumbers list of numbers that can be used to sum to n
+     * @param n number that must be summed using possibleNumbers
+     *
+     * @exception IllegalArgumentException method throws exception when n or one of possibleNumbers
+     * are not natural. That's because there can be infinity ways to sum to n using zero or
+     * negative numbers
+     *
+     * @return long - ways to sum to n
+     */
     public long countWaysToSumToN(List<Integer> possibleNumbers, int n){
         if (n < 1) {
             throw new IllegalArgumentException("Number can only be natural.");

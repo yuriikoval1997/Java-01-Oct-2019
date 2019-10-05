@@ -39,6 +39,7 @@ class CountingSortTest {
         tests.add(new ArraySortTest.TestData(new int[]{11, 12, 22, 25, 34, 64, 87, 90}, new int[]{11, 12, 22, 25, 34, 64, 87, 90}));
         tests.add(new ArraySortTest.TestData(new int[]{11, 12, 22, 25, 34, 64, 87, 90}, new int[]{90, 87, 64, 34, 25, 22, 12, 11}));
         tests.add(new ArraySortTest.TestData(new int[]{0, 11, 12, 22, 25, 34, 64, 87, 90}, new int[]{64, 34, 25, 12, 22, 11, 90, 87, 0}));
+        tests.add(new ArraySortTest.TestData(new int[]{0}, new int[]{0}));
 
         return tests.stream();
     }
