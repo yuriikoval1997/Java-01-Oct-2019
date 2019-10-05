@@ -1,5 +1,6 @@
 package inc.softserve.lv_448.java.algo.starter;
 
+import inc.softserve.lv_448.java.algo.dynamic_programming.LongestPalindromicSequence;
 import inc.softserve.lv_448.java.algo.dynamic_programming.DifferenceOne;
 import inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.Extractor;
@@ -32,6 +33,9 @@ class DP {
                 case "4":
                     result = new WaysToSumCounter().countWaysToSumToN(consoleReader.readIntegers(), consoleReader.readInt());
                     break label;
+                case "5":
+                    result = new LongestPalindromicSequence().findLengthOfTheLongestPalindrome(consoleReader.readString());
+                    break label;
                 case "back":
                     return;
                 default:
@@ -48,6 +52,7 @@ class DP {
                 + "2 = modified;\n"
                 + "3 = difference one;\n"
                 + "4 = count ways to sum to N\n"
+                + "5 = the longest palindromic sequence\n"
                 //todo - options
                 + "'back' - to return to the main menu"
         );
