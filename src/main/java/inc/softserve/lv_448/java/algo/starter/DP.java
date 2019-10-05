@@ -1,6 +1,7 @@
 package inc.softserve.lv_448.java.algo.starter;
 
 import inc.softserve.lv_448.java.algo.dynamic_programming.DifferenceOne;
+import inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.Extractor;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.Fibonacci;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.ModifiedFibonacci;
@@ -29,8 +30,10 @@ class DP {
                     result = DifferenceOne.longestSubSeq(consoleReader.readIntegers());
                     break label;
                 case "4":
-                    //todo - cases
+                    result = new WaysToSumCounter().countWaysToSumToN(consoleReader.readIntegers(), consoleReader.readInt());
                     break label;
+                case "back":
+                    return;
                 default:
                     System.out.println("There is no such an option! Try again.");
                     break;
@@ -44,7 +47,9 @@ class DP {
                 + "1 = fibonacci number;\n"
                 + "2 = modified;\n"
                 + "3 = difference one;\n"
+                + "4 = count ways to sum to N\n"
                 //todo - options
+                + "'back' - to return to the main menu"
         );
     }
 }

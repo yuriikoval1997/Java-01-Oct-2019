@@ -1,9 +1,6 @@
 package inc.softserve.lv_448.java.algo.starter;
 
-import inc.softserve.lv_448.java.algo.simple_arr_sorters.InsertionSort;
-import inc.softserve.lv_448.java.algo.simple_arr_sorters.MergeSort;
-import inc.softserve.lv_448.java.algo.simple_arr_sorters.QuickSort;
-import inc.softserve.lv_448.java.algo.simple_arr_sorters.Sort;
+import inc.softserve.lv_448.java.algo.simple_arr_sorters.*;
 import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
 
 import java.util.stream.IntStream;
@@ -28,11 +25,13 @@ class Sorter {
                     sort = new InsertionSort();
                     break label;
                 case "4":
-                    //todo - count sort
+                    sort = new CountingSort();
                     break label;
                 case "5":
-                    //todo - bucket sort
+                    sort = new BucketSort();
                     break label;
+                case "back":
+                    return;
                 default:
                     System.out.println("There is no such an option! Try again.");
                     break;
@@ -41,8 +40,12 @@ class Sorter {
         int[] integers = consoleReader.readIntegers().stream()
                 .mapToInt(x -> x)
                 .toArray();
-        sort.accept(integers);
-        IntStream.of(integers).forEach(x -> System.out.print(x + " "));
+        try {
+            sort.accept(integers);
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            IntStream.of(integers).forEach(x -> System.out.print(x + " "));
+        }
     }
 
     private static void showOptions(){
@@ -50,8 +53,9 @@ class Sorter {
                 + "1 = merge sort\n"
                 + "2 = quick sort\n"
                 + "3 = insertion sort\n"
-                + "4 = count sort\n"
+                + "4 = counting sort\n"
                 + "5 = bucket sort\n"
+                + "'back' - to return to the main menu\n"
         );
     }
 }
