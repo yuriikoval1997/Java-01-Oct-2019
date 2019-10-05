@@ -34,7 +34,7 @@ class DP {
                     result = new WaysToSumCounter().countWaysToSumToN(consoleReader.readIntegers(), consoleReader.readInt());
                     break label;
                 case "5":
-                    result = new LongestPalindromicSequence().findLengthOfTheLongestPalindrome(consoleReader.readString());
+                    result = new LongestPalindromicSequence().findLengthOfTheLongestPalindrome();
                     break label;
                 case "back":
                     return;
