@@ -1,6 +1,6 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
-public class MergeArraySort implements ArraySort {
+public class MergeSort implements Sort {
 
     @Override
     public void accept(int[] arr) {
