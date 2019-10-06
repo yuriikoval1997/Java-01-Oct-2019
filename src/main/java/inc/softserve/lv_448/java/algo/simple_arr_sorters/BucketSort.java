@@ -3,6 +3,7 @@ package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -20,6 +21,9 @@ public class BucketSort implements Sort {
     @Override
     public void accept(int[] ints) {
         if (ints.length < 2) {
+            return;
+        }
+        if(Arrays.stream(ints).distinct().count() == 1){
             return;
         }
 

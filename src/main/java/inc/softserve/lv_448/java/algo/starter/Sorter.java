@@ -44,8 +44,8 @@ class Sorter {
             sort.accept(integers);
         }catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
-            IntStream.of(integers).forEach(x -> System.out.print(x + " "));
         }
+        IntStream.of(integers).forEach(x -> System.out.print(x + " "));
     }
 
     private static void showOptions(){
