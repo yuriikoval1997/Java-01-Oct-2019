@@ -1,9 +1,10 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -40,8 +41,8 @@ public class BucketSort implements Sort {
      *
      * @param el           element to which must be determined the number of bucket
      * @param bucketAmount bucket amount
-     * @param min minimum element of array
-     * @param max maximum element of array
+     * @param min minimum  element of array
+     * @param max maximum  element of array
      * @return int - number of bucket for el
      */
     private int msBits(final int el, final int bucketAmount, long min, long max) {

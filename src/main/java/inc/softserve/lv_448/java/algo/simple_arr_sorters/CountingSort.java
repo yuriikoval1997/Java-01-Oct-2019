@@ -60,7 +60,7 @@ public class CountingSort implements Sort {
     }
 
     /**
-     * Method that fill list with indexes of array element. Every index
+     * Method that fills list with indexes of array element. Every index
      * determines position of element in sorted array
      *
      * @param filledWithElCount list with numbers of repetitions of
