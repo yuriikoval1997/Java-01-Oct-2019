@@ -1,6 +1,9 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
 import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Class for sorting arrays of integers using 'Bucket sort' algorithm
@@ -20,8 +23,8 @@ public class BucketSort implements Sort {
             return;
         }
 
-        Map<Integer, int[]> buckets = formBuckets(ints);
-        buckets.values().forEach(this);
+        List<int[]> buckets = formBuckets(ints);
+        buckets.forEach(this);
 
         int[] sorted = formArray(buckets, ints.length);
 
@@ -31,16 +34,13 @@ public class BucketSort implements Sort {
     /**
      * Method that returns number of bucket to put element
      *
-     * @param array array to sort
-     * @param el element to which must be determined the number of bucket
+     * @param el           element to which must be determined the number of bucket
      * @param bucketAmount bucket amount
-     *
+     * @param min minimum element of array
+     * @param max maximum element of array
      * @return int - number of bucket for el
      */
-    private int msBits(final int[] array, final int el, final int bucketAmount) {
-        long max = Arrays.stream(array).max().getAsInt();
-        long min = Arrays.stream(array).min().getAsInt();
-
+    private int msBits(final int el, final int bucketAmount, long min, long max) {
         return (int) ((el - min) / ((double) (max - min + 1) / bucketAmount));
     }
 
@@ -48,11 +48,13 @@ public class BucketSort implements Sort {
      * Method for creating buckets from array
      *
      * @param array array to create buckets
-     * @return Map<Integer, int[]> - map, that is bucket
+     * @return List<int [ ]> - List with buckets
      */
-    private Map<Integer, int[]> formBuckets(final int[] array) {
-        Map<Integer, List<Integer>> buckets = new TreeMap<>();
+    private List<int[]> formBuckets(final int[] array) {
+        List<List<Integer>> buckets;
         int bucketsNumb;
+        int max = Arrays.stream(array).max().getAsInt();
+        int min = Arrays.stream(array).min().getAsInt();
 
         if (array.length < 4) {                             // if array.length < 4 sqrt() = 1 and cause infinity recursion
             bucketsNumb = 2;
@@ -60,34 +62,34 @@ public class BucketSort implements Sort {
             bucketsNumb = (int) Math.sqrt(array.length);   // Formula for counting number of buckets
         }
 
-        List<Integer> currentBucket;
-        int offset;
-        for (int i = 0; i < array.length; i++) {
-            offset = msBits(array, array[i], bucketsNumb);
-            currentBucket = buckets.get(offset);
+        buckets = Stream.generate((Supplier<ArrayList<Integer>>) ArrayList::new).
+                limit(bucketsNumb).
+                collect(Collectors.toList());
 
-            if (currentBucket != null) {
-                currentBucket.add(array[i]);
-            } else {
-                buckets.put(offset, new ArrayList<>(Collections.singletonList(array[i])));
-            }
+        List<Integer> currentBucket;
+        int bucketIndex;
+        for (int i = 0; i < array.length; i++) {
+            bucketIndex = msBits(array[i], bucketsNumb, min, max);
+            currentBucket = buckets.get(bucketIndex);
+
+            currentBucket.add(array[i]);
         }
 
         return convertToArrBuckets(buckets);
     }
 
     /**
-     * Method for converting buckets with List of integers
-     * to buckets with arrays of int
+     * Method for converting buckets with List of Integers
+     * to buckets with arrays of ints
      *
      * @param buckets - buckets to convert
-     * @return Map<Integer, int[]> - converted buckets
+     * @return List<int [ ]> - converted buckets
      */
-    private Map<Integer, int[]> convertToArrBuckets(final Map<Integer, List<Integer>> buckets) {
-        Map<Integer, int[]> converted = new LinkedHashMap<>();
+    private List<int[]> convertToArrBuckets(final List<List<Integer>> buckets) {
+        List<int[]> converted = new ArrayList<>();
 
-        for (Map.Entry<Integer, List<Integer>> entry : buckets.entrySet()) {
-            converted.put(entry.getKey(), entry.getValue().stream().mapToInt(a -> a).toArray());
+        for (int i = 0; i < buckets.size(); i++) {
+            converted.add(buckets.get(i).stream().mapToInt(a -> a).toArray());
         }
 
         return converted;
@@ -96,15 +98,15 @@ public class BucketSort implements Sort {
     /**
      * Method for creating array from buckets
      *
-     * @param buckets buckets
+     * @param buckets   buckets
      * @param arrLength length of array that will be created
      * @return int[] - array
      */
-    private int[] formArray(final Map<Integer, int[]> buckets, final int arrLength) {
+    private int[] formArray(final List<int[]> buckets, final int arrLength) {
         int[] result = new int[arrLength];
         int offset = 0;
 
-        for (int[] bucket : buckets.values()) {
+        for (int[] bucket : buckets) {
             System.arraycopy(bucket, 0, result, offset, bucket.length);
             offset += bucket.length;
         }

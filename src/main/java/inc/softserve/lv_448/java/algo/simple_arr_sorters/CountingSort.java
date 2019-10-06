@@ -15,6 +15,8 @@ public class CountingSort implements Sort {
     /**
      * Method for sorting array of integers
      *
+     * @exception IllegalArgumentException throw when there is negative element in array.
+     * This method can only sort arrays with positive ints;
      * @param ints array that must be sorted
      */
     @Override

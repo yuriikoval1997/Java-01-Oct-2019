@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Class for counting the number of ways to
  * sum to N using given integers
- *
+ *git
  * @author Oleh Kopylchak
  */
 public class WaysToSumCounter {
