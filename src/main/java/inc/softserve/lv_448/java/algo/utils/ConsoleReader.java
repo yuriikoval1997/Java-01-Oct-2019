@@ -20,9 +20,9 @@ public class ConsoleReader implements AutoCloseable{
      * If the user types 'exit', the program stops.
      * @return list of integers
      */
-    public List<Integer> readIntegers(){
+    public List<Integer> readIntegers(String message){
         while (true){
-            System.out.println("Please, enter space separated integers:");
+            System.out.println(message);
             try {
                 String line = bufferedReader.readLine().trim();
                 if (line.equals("exit")){
@@ -47,9 +47,9 @@ public class ConsoleReader implements AutoCloseable{
      * If the user types 'exit', the program stops.
      * @return an integer
      */
-    public int readInt(){
+    public int readInt(String message){
         while (true){
-            System.out.println("Please, enter an integer:");
+            System.out.println(message);
             try {
                 return Integer.parseInt(bufferedReader.readLine());
             } catch (NumberFormatException nfe){
@@ -65,7 +65,8 @@ public class ConsoleReader implements AutoCloseable{
      * If the user types 'exit', the program stops.
      * @return string read from the console.
      */
-    public String readString(){
+    public String readString(String message){
+        System.out.println(message);
         try {
             String line = bufferedReader.readLine().trim();
             if (line.equals("exit")){

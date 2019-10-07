@@ -1,4 +1,4 @@
-package inc.softserve.lv_448.java.algo.dynamic_programming.sequnences;
+package inc.softserve.lv_448.java.algo.dynamic_programming.sequences;
 
 public class Extractor {
     private final SeqGenerator seqGenerator;

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans>
+    <beanMap>
+        <entry>
+            <key>1</key>
+            <value>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.sequences.Fibonacci</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>2</key>
+            <value>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.sequences.ModifiedFibonacci</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>3</key>
+            <value>
+                <fullyQualifiedName>interesting row</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>4</key>
+            <value>
+                <fullyQualifiedName>longest subsequence</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>5</key>
+            <value>
+                <fullyQualifiedName>Ways to sum to N using array elements with repetition</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>6</key>
+            <value>
+                <fullyQualifiedName>Ways to write n as sum of two or more positive integersVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>7</key>
+            <value>
+                <fullyQualifiedName>Ways to cover in 3 stepsVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>8</key>
+            <value>
+                <fullyQualifiedName>Paths without crossingVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>9</key>
+            <value>
+                <fullyQualifiedName>Work to be with High-effort or with Low-effortVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>10</key>
+            <value>
+                <fullyQualifiedName>The longest palindromic subsequenceVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>11</key>
+            <value>
+                <fullyQualifiedName>Friend pairsVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>12</key>
+            <value>
+                <fullyQualifiedName>Ways to tile the floorVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>13</key>
+            <value>
+                <fullyQualifiedName>Painting the fenceVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>14</key>
+            <value>
+                <fullyQualifiedName>Optimized painting fence: use one variable instead of a tableVirtual programming lab</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>15</key>
+            <value>
+                <fullyQualifiedName>Insertion SortFile</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>16</key>
+            <value>
+                <fullyQualifiedName>Counting SortFile</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>17</key>
+            <value>
+                <fullyQualifiedName>Quick SortFile</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>18</key>
+            <value>
+                <fullyQualifiedName>Bucket SortFile</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>19</key>
+            <value>
+                <fullyQualifiedName>Merge SortFile</fullyQualifiedName>
+            </value>
+        </entry>
+    </beanMap>
+</beans>

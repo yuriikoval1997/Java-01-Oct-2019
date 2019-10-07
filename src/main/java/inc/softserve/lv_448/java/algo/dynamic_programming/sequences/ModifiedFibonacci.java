@@ -1,4 +1,4 @@
-package inc.softserve.lv_448.java.algo.dynamic_programming.sequnences;
+package inc.softserve.lv_448.java.algo.dynamic_programming.sequences;
 
 import java.util.ArrayList;
 import java.util.Collections;
