@@ -34,11 +34,8 @@ public class PaintingTheFence implements Startable {
      * @return dp[n] number of ways of painting the fence
      */
     long countWays(int n, int k) {
-        // To store results for subproblems
-        //long dp[] = new long[n + 1];
+        // List of results of subproblems
         ArrayList<Long> results = new ArrayList<>(Collections.nCopies(n+1, 0L));
-
-        //Arrays.fill(dp, 0);
 
         int mod = 1000000007;
 
