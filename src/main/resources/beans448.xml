@@ -13,12 +13,12 @@
                 <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.sequences.ModifiedFibonacci</fullyQualifiedName>
             </value>
         </entry>
-<!--        <entry>-->
-<!--            <key>3</key>-->
-<!--            <value>-->
-<!--                <fullyQualifiedName>interesting row</fullyQualifiedName>-->
-<!--            </value>-->
-<!--        </entry>-->
+        <entry>
+            <key>3</key>
+            <value>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.InterestingRow</fullyQualifiedName>
+            </value>
+        </entry>
         <entry>
             <key>4</key>
             <value>
