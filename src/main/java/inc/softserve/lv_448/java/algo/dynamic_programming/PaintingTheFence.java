@@ -22,12 +22,14 @@ public class PaintingTheFence implements Startable {
      */
     @Override
     public void start(ConsoleUtil consoleUtil) {
-
+        long result = countWays(consoleUtil.readInt("Please, enter n-value: "),
+                consoleUtil.readInt("Please, enter k-value: "));
     }
 
     /**
-     * Method counts the maximum amount of cost
-     * that can be performed within given number of days.
+     * Method counts the number of ways
+     * to paint the fence with n number of posts
+     * and k number of colors
      *
      * @param n number of posts
      * @param k number of colors
