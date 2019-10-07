@@ -34,13 +34,13 @@
         <entry>
             <key>6</key>
             <value>
-                <fullyQualifiedName>Ways to write n as sum of two or more positive integersVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.WaysToCalculateSum</fullyQualifiedName>
             </value>
         </entry>
         <entry>
             <key>7</key>
             <value>
-                <fullyQualifiedName>Ways to cover in 3 stepsVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.WaysToCoverInThreeSteps</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -64,7 +64,7 @@
         <entry>
             <key>11</key>
             <value>
-                <fullyQualifiedName>Friend pairsVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.sequences.FriendPairs</fullyQualifiedName>
             </value>
         </entry>
         <entry>
