@@ -1,5 +1,4 @@
-package com.company;
-//package inc.softserve.lv_448.java
+package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
