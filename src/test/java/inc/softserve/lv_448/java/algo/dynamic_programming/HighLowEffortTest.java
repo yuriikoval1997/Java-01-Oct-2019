@@ -1,7 +1,6 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,22 +8,17 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HighLowEffortTest {
+class HighLowEffortTest {
 
     private HighLowEffort testClass;
 
-    @BeforeAll
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         testClass = new HighLowEffort();
     }
 
-    @AfterAll
-    public void cleanUp() {
-        testClass = null;
-    }
-
     @Test
-    public void lowOrHighEffort() {
+    void lowOrHighEffort() {
         int actual;
         int expected = 20;
 

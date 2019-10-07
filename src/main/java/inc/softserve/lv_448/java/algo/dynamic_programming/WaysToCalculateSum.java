@@ -37,6 +37,6 @@ public class WaysToCalculateSum implements Startable {
     /**Method starts task flow execution*/
     @Override
     public void start(ConsoleReader consoleReader) {
-        calculateWays(consoleReader.readInt("Please enter positive integer to calculate way: "));
+        System.out.println("Your result " + calculateWays(consoleReader.readInt("Please enter positive integer to calculate way: ")));
     }
 }

@@ -10,7 +10,7 @@ class LongestPalindromicSequenceTest {
     private LongestPalindromicSequence longestPalindromicSequence;
 
     @BeforeEach
-    public void init(){
+    void init(){
         longestPalindromicSequence = new LongestPalindromicSequence();
     }
 

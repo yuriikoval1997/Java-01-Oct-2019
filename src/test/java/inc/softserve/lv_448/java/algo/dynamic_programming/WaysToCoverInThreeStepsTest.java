@@ -3,6 +3,7 @@ package inc.softserve.lv_448.java.algo.dynamic_programming;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class WaysToCoverInThreeStepsTest {
@@ -15,11 +16,11 @@ class WaysToCoverInThreeStepsTest {
 
     @Test
     void calculateNumberOfWays() {
-        assertTrue(w.calculateNumberOfWays(5) == 13);
-        assertTrue(w.calculateNumberOfWays(15) == 5768);
-        assertTrue(w.calculateNumberOfWays(-4) == 0);
-        assertTrue(w.calculateNumberOfWays(0) == 1);
-        assertTrue(w.calculateNumberOfWays(1) == 1);
-        assertTrue(w.calculateNumberOfWays(2) == 2);
+        assertEquals(13, w.calculateNumberOfWays(5));
+        assertEquals(5768, w.calculateNumberOfWays(15));
+        assertEquals(0, w.calculateNumberOfWays(-4));
+        assertEquals(1, w.calculateNumberOfWays(0));
+        assertEquals(1, w.calculateNumberOfWays(1));
+        assertEquals(2, w.calculateNumberOfWays(2));
     }
 }
