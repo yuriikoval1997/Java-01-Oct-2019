@@ -19,7 +19,7 @@ public class WaysToCalculateSum {
      */
     public static int calculateWays(int userNumber) {
         if (userNumber < 0) {
-            throw new IllegalArgumentException("Number can be only natural.");
+            return 1;
         }
         int[] array = new int[userNumber + 1];
         array[0] = 1;

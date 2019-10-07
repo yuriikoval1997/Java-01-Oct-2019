@@ -20,14 +20,8 @@ class WaysToCalculateSumTest {
     }
 
     @Test
-    void calculateWaysException() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            test.calculateWays(-1);
-        });
-    }
-
-    @Test
     void calculateWays() {
+        assertEquals(1, test.calculateWays(-1));
         assertEquals(1, test.calculateWays(0));
         assertEquals(2, test.calculateWays(3));
         assertEquals(10, test.calculateWays(6));
