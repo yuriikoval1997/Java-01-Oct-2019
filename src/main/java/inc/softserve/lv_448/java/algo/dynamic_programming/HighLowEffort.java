@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +20,10 @@ public class HighLowEffort implements Startable {
      * Method starts task flow execution
      */
     @Override
-    public void start(ConsoleReader consoleReader) {
-        int result = getAmountOfCost(consoleReader.readInt("Please, enter number of days: "),
-                consoleReader.readIntegers("Please, enter low-effort task values: "),
-                consoleReader.readIntegers("Please, enter high-effort task values: "));
+    public void start(ConsoleUtil consoleUtil) {
+        int result = getAmountOfCost(consoleUtil.readInt("Please, enter number of days: "),
+                consoleUtil.readIntegers("Please, enter low-effort task values: "),
+                consoleUtil.readIntegers("Please, enter high-effort task values: "));
         System.out.println("The result is " + result);
     }
 

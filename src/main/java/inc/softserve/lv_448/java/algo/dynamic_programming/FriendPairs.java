@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 /**
  * Class find out the total number of ways in which friends can remain single or can be paired up
@@ -14,8 +14,8 @@ public class FriendPairs implements Startable {
    * Main method for getting input, calculating and output of result
    */
   @Override
-  public void start(ConsoleReader consoleReader) {
-    System.out.println("Your result is: " + checkValidInputNumbers(consoleReader.readInt("Please fill in count of friends")));
+  public void start(ConsoleUtil consoleUtil) {
+    System.out.println("Your result is: " + checkValidInputNumbers(consoleUtil.readInt("Please fill in count of friends")));
   }
 
   /**

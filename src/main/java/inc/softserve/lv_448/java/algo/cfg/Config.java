@@ -1,12 +1,12 @@
 package inc.softserve.lv_448.java.algo.cfg;
 
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 public class Config {
 
-    private final ConsoleReader consoleReader = new ConsoleReader();
+    private final ConsoleUtil consoleUtil = new ConsoleUtil();
 
-    public ConsoleReader consoleReader(){
-        return consoleReader;
+    public ConsoleUtil consoleReader(){
+        return consoleUtil;
     }
 }

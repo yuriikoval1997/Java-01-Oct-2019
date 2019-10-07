@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming.sequences;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +10,7 @@ import java.util.List;
 public class Fibonacci implements SeqGenerator, Startable {
 
     @Override
-    public void start(ConsoleReader consoleReader) {
+    public void start(ConsoleUtil consoleUtil) {
     }
 
     private final List<Integer> seq = new ArrayList<>();

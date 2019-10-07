@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ public class WaysToSumCounter implements Startable {
     /**
      * Method, that starts counting
      *
-     * @param consoleReader object for console input reading
+     * @param consoleUtil object for console input reading
      */
     @Override
-    public void start(ConsoleReader consoleReader) {
+    public void start(ConsoleUtil consoleUtil) {
         try {
-            List<Integer> possibleNumbers = consoleReader.readIntegers("Please, enter possible numbers: ");
-            int n = consoleReader.readInt("Please enter N: ");
+            List<Integer> possibleNumbers = consoleUtil.readIntegers("Please, enter possible numbers: ");
+            int n = consoleUtil.readInt("Please enter N: ");
             long result = countWaysToSumToN(possibleNumbers, n);
 
             System.out.println("Number of ways to sum to " + n + " is: " + result);

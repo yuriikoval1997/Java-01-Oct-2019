@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,12 +18,12 @@ public class CountingSort implements Sort, Startable {
     /**
      * Method, that starts sorting
      *
-     * @param consoleReader object for console input reading
+     * @param consoleUtil object for console input reading
      */
     @Override
-    public void start(ConsoleReader consoleReader) {
+    public void start(ConsoleUtil consoleUtil) {
         try {
-            int[] array = consoleReader.readIntegers("Please, enter array elements: ").
+            int[] array = consoleUtil.readIntegers("Please, enter array elements: ").
                     stream().mapToInt(a -> a).toArray();
             accept(array);
 

@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 /**
  * Class for calculation non-crossing lines to connect points in a circle.
@@ -14,8 +14,8 @@ public class PathWithoutCrossing implements Startable {
      * Main method for getting input, calculating and output of result.
      */
     @Override
-    public void start(ConsoleReader consoleReader){
-        System.out.println("Your result is: " + calculate(consoleReader.readInt("Enter even number")));
+    public void start(ConsoleUtil consoleUtil){
+        System.out.println("Your result is: " + calculate(consoleUtil.readInt("Enter even number")));
     }
 
     /**

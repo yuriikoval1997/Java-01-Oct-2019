@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 /**
  * Class for counting possible
@@ -16,9 +16,9 @@ public class WaysToTileTheFloor implements Startable {
      * Method starts task flow execution
      */
     @Override
-    public void start(ConsoleReader consoleReader) {
-        int result = countWays(consoleReader.readInt("Please, enter n-dimension of the floor: "),
-               consoleReader.readInt("Please, enter m-dimension of the floor: "));
+    public void start(ConsoleUtil consoleUtil) {
+        int result = countWays(consoleUtil.readInt("Please, enter n-dimension of the floor: "),
+               consoleUtil.readInt("Please, enter m-dimension of the floor: "));
         System.out.println("The result is " + result);
     }
 

@@ -1,7 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 /**
  * That class calculates all possible ways to write n
@@ -36,7 +36,7 @@ public class WaysToCalculateSum implements Startable {
 
     /**Method starts task flow execution*/
     @Override
-    public void start(ConsoleReader consoleReader) {
-        System.out.println("Your result " + calculateWays(consoleReader.readInt("Please enter positive integer to calculate way: ")));
+    public void start(ConsoleUtil consoleUtil) {
+        System.out.println("Your result " + calculateWays(consoleUtil.readInt("Please enter positive integer to calculate way: ")));
     }
 }
