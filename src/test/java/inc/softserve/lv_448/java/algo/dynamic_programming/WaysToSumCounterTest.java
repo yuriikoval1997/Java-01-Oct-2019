@@ -29,7 +29,7 @@ class WaysToSumCounterTest {
 
     @ParameterizedTest
     @MethodSource("supplyTestDataThrowsIllegalArgumentException")
-    void countWaysToSumToNThrowsIllegalArgumentException(List<Integer> possibleNumbers, int n, int expected) {
+    void countWaysToSumToNThrowsIllegalArgumentException(List<Integer> possibleNumbers, int n) {
         assertThrows(IllegalArgumentException.class,
                 () -> waysToSumCounter.countWaysToSumToN(possibleNumbers, n));
     }
@@ -41,8 +41,8 @@ class WaysToSumCounterTest {
     }
 
     static Stream<Arguments> supplyTestDataThrowsIllegalArgumentException() {
-        return Stream.of(Arguments.arguments(Arrays.asList(0, 1, 2), 1, 1),
-                Arguments.arguments(Arrays.asList(-1, 5, 6), 1, 1),
-                Arguments.arguments(Arrays.asList(4, 5, 6), 0, 1));
+        return Stream.of(Arguments.arguments(Arrays.asList(0, 1, 2), 1),
+                Arguments.arguments(Arrays.asList(-1, 5, 6), 1),
+                Arguments.arguments(Arrays.asList(4, 5, 6), 0));
     }
 }

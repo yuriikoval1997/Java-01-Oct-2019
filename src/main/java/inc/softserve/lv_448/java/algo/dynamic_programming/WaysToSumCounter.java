@@ -23,9 +23,9 @@ public class WaysToSumCounter implements Startable {
         try {
             List<Integer> possibleNumbers = consoleUtil.readIntegers("Please, enter possible numbers: ");
             int n = consoleUtil.readInt("Please enter N: ");
-            long result = countWaysToSumToN(possibleNumbers, n);
+            int result = (int) countWaysToSumToN(possibleNumbers, n);
 
-            System.out.println("Number of ways to sum to " + n + " is: " + result);
+            consoleUtil.printResult(result);
         }catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
