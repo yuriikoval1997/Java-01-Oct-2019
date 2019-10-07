@@ -34,7 +34,7 @@ public class LongestPalindromicSequence implements Startable {
         return longestPalindrome.length();
     }
 
-    String checkIfEqual(String enteredString, int start, int end) {
+    private String checkIfEqual(String enteredString, int start, int end) {
         while ((start >= 0 && end < enteredString.length()) && (enteredString.charAt(start) == enteredString.charAt(end))) {
             start--;
             end++;
