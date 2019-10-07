@@ -1,6 +1,7 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class for counting the maximum cost
@@ -21,7 +22,7 @@ public class HighLowEffort {
      * @param highEffortTasks high-effort task costs
      * @return result the maximum amount of cost that can be performed
      */
-    public static int getAmountOfCost(int numberOfDays, ArrayList<Integer> lowEffortTasks, ArrayList<Integer> highEffortTasks) {
+    public int getAmountOfCost(int numberOfDays, List<Integer> lowEffortTasks, List<Integer> highEffortTasks) {
         int result;
         ArrayList<Integer> taskEfforts = new ArrayList<>();
 

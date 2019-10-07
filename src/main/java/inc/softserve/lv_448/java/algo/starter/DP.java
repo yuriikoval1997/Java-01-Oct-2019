@@ -1,5 +1,6 @@
 package inc.softserve.lv_448.java.algo.starter;
 
+import inc.softserve.lv_448.java.algo.dynamic_programming.HighLowEffort;
 import inc.softserve.lv_448.java.algo.dynamic_programming.LongestPalindromicSequence;
 import inc.softserve.lv_448.java.algo.dynamic_programming.DifferenceOne;
 import inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter;
@@ -10,7 +11,7 @@ import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
 
 class DP {
 
-    static void input(ConsoleReader consoleReader){
+    static void input(ConsoleReader consoleReader) {
         showOptions();
         String command;
         Object result = null;
@@ -36,6 +37,10 @@ class DP {
                 case "5":
                     result = new LongestPalindromicSequence().findLengthOfTheLongestPalindrome();
                     break label;
+                case "9":
+                    result = new HighLowEffort().
+                            getAmountOfCost(consoleReader.readInt(), consoleReader.readIntegers(), consoleReader.readIntegers());
+                    break label;
                 case "back":
                     return;
                 default:
@@ -53,6 +58,7 @@ class DP {
                 + "3 = difference one;\n"
                 + "4 = count ways to sum to N\n"
                 + "5 = the longest palindromic sequence\n"
+                + "9 = high or low effort \n"
                 //todo - options
                 + "'back' - to return to the main menu"
         );
