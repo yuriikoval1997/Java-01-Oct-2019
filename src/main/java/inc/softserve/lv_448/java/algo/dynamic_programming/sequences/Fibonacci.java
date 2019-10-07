@@ -9,10 +9,6 @@ import java.util.List;
 
 public class Fibonacci implements SeqGenerator, Startable {
 
-    @Override
-    public void start(ConsoleUtil consoleUtil) {
-    }
-
     private final List<Integer> seq = new ArrayList<>();
 
     public Fibonacci(){

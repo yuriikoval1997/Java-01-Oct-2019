@@ -2,7 +2,6 @@ package inc.softserve.lv_448.java.algo.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,8 +11,8 @@ public class ConsoleUtil implements AutoCloseable{
 
     private final BufferedReader bufferedReader;
 
-    public ConsoleUtil() {
-        this.bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    public ConsoleUtil(BufferedReader bufferedReader) {
+        this.bufferedReader = bufferedReader;
     }
 
     /**
@@ -32,6 +31,7 @@ public class ConsoleUtil implements AutoCloseable{
                 }
                 String[] numbers = line.split(" ");
                 return Stream.of(numbers)
+                        .filter(x -> ! x.isEmpty())
                         .map(Integer::valueOf)
                         .collect(Collectors.toList());
             } catch (NumberFormatException nfe){
@@ -52,7 +52,7 @@ public class ConsoleUtil implements AutoCloseable{
         while (true){
             System.out.println(message);
             try {
-                return Integer.parseInt(bufferedReader.readLine());
+                return Integer.parseInt(bufferedReader.readLine().trim());
             } catch (NumberFormatException nfe){
                 System.out.println("You entered not a number. Try again!");
             } catch (IOException e) {
@@ -66,7 +66,7 @@ public class ConsoleUtil implements AutoCloseable{
      * If the user types 'exit', the program stops.
      * @return string read from the console.
      */
-    public String readString(String message){
+    public String readString(String message) {
         System.out.println(message);
         try {
             String line = bufferedReader.readLine().trim();
@@ -81,7 +81,7 @@ public class ConsoleUtil implements AutoCloseable{
         }
     }
 
-    public void printResult(int... result){
+    public void printResult(int... result) {
         System.out.println("Your result is: " + Arrays.toString(result));
     }
 
