@@ -8,7 +8,7 @@ public class LongestPalindromicSequence implements Startable {
     @Override
     public void start(ConsoleUtil consoleUtil) {
         String enteredString = consoleUtil.readString("Please, input your string sequence: ");
-        System.out.println("Output: " + findLengthOfTheLongestPalindrome(enteredString));
+        consoleUtil.printResult(findLengthOfTheLongestPalindrome(enteredString));
     }
 
     public int findLengthOfTheLongestPalindrome(String enteredString) {
