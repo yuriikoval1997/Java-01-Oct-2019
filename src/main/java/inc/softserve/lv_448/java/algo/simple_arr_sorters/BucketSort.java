@@ -18,20 +18,6 @@ import java.util.stream.Stream;
 public class BucketSort implements Sort, Startable {
 
     /**
-     * Method, that starts sorting
-     *
-     * @param consoleReader object for console input reading
-     */
-    @Override
-    public void start(ConsoleReader consoleReader) {
-        int[] array = consoleReader.readIntegers("Please, enter array elements: ").
-                stream().mapToInt(a -> a).toArray();
-        accept(array);
-
-        System.out.println("Sorted array: \n" + Arrays.toString(array));
-    }
-
-    /**
      * Method for sorting arrays of integers using 'Bucket sort' algorithm.
      *
      * @param ints array to sort

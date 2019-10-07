@@ -15,7 +15,7 @@ public class FriendPairs implements Startable {
    */
   @Override
   public void start(ConsoleReader consoleReader) {
-    System.out.println(checkValidInputNumbers(consoleReader.readInt("Please fill in count of friends")));
+    System.out.println("Your result is: " + checkValidInputNumbers(consoleReader.readInt("Please fill in count of friends")));
   }
 
   /**
@@ -26,7 +26,7 @@ public class FriendPairs implements Startable {
    * @return long - Number of ways in which friends can remain single or can be paired up
    */
   int countFriendsPairings(int count) {
-    int array[] = new int[count + 1];
+    int[] array = new int[count + 1];
     for (int i = 0; i <= count; i++) {
       if (i <= 2) {
         array[i] = i;
