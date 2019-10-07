@@ -4,6 +4,9 @@
 
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 /**
  * This class solving task called "Ways to cover in three steps"
  *
@@ -19,7 +22,7 @@ public class WaysToCoverInThreeSteps implements Startable{
      * Method "start" runs our application
      */
     @Override
-    void start(ConsoleReader consoleReader){
+    public void start(ConsoleReader consoleReader){
         System.out.println("There is " + calculateNumberOfWays(consoleReader.readInt("Enter distance(bigger than 2):")) + " ways to cover distance.");
     }
 

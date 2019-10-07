@@ -28,7 +28,7 @@
         <entry>
             <key>5</key>
             <value>
-                <fullyQualifiedName>Ways to sum to N using array elements with repetition</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -46,7 +46,7 @@
         <entry>
             <key>8</key>
             <value>
-                <fullyQualifiedName>Paths without crossingVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.PathWithoutCrossing</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -58,13 +58,13 @@
         <entry>
             <key>10</key>
             <value>
-                <fullyQualifiedName>The longest palindromic subsequenceVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.LongestPalindromicSequence</fullyQualifiedName>
             </value>
         </entry>
         <entry>
             <key>11</key>
             <value>
-                <fullyQualifiedName>Friend pairsVirtual programming lab</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.sequences.FriendPairs</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -94,7 +94,7 @@
         <entry>
             <key>16</key>
             <value>
-                <fullyQualifiedName>Counting SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.CountingSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -106,7 +106,7 @@
         <entry>
             <key>18</key>
             <value>
-                <fullyQualifiedName>Bucket SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.BucketSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>
