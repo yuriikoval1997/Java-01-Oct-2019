@@ -23,7 +23,7 @@ public class WaysToCoverInThreeSteps implements Startable{
      */
     @Override
     public void start(ConsoleUtil consoleUtil){
-        System.out.println("There is " + calculateNumberOfWays(consoleUtil.readInt("Enter distance(bigger than 2):")) + " ways to cover distance.");
+        consoleUtil.printResult(calculateNumberOfWays(consoleUtil.readInt("Enter distance(bigger than 2):")));
     }
 
     /**

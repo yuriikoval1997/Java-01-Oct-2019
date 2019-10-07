@@ -27,7 +27,7 @@ public class CountingSort implements Sort, Startable {
                     stream().mapToInt(a -> a).toArray();
             accept(array);
 
-            System.out.println("Sorted array: \n" + Arrays.toString(array));
+            consoleUtil.printResult(array);
         } catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
         }

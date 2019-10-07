@@ -85,6 +85,10 @@ public class ConsoleUtil implements AutoCloseable{
         System.out.println("Your result is: " + Arrays.toString(result));
     }
 
+    public void printLongResult(long... result){
+        System.out.println("Your result is: " + Arrays.toString(result));
+    }
+
     @Override
     public void close() throws Exception {
         this.bufferedReader.close();

@@ -24,7 +24,7 @@ public class HighLowEffort implements Startable {
         int result = getAmountOfCost(consoleUtil.readInt("Please, enter number of days: "),
                 consoleUtil.readIntegers("Please, enter low-effort task values: "),
                 consoleUtil.readIntegers("Please, enter high-effort task values: "));
-        System.out.println("The result is " + result);
+        consoleUtil.printResult(result);
     }
 
     /**

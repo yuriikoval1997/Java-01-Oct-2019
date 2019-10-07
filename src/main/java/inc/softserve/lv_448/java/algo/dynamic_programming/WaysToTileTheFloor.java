@@ -19,7 +19,7 @@ public class WaysToTileTheFloor implements Startable {
     public void start(ConsoleUtil consoleUtil) {
         int result = countWays(consoleUtil.readInt("Please, enter n-dimension of the floor: "),
                consoleUtil.readInt("Please, enter m-dimension of the floor: "));
-        System.out.println("The result is " + result);
+        consoleUtil.printResult(result);
     }
 
     /**

@@ -15,7 +15,7 @@ public class FriendPairs implements Startable {
    */
   @Override
   public void start(ConsoleUtil consoleUtil) {
-    System.out.println("Your result is: " + checkValidInputNumbers(consoleUtil.readInt("Please fill in count of friends")));
+    consoleUtil.printResult(checkValidInputNumbers(consoleUtil.readInt("Please fill in count of friends")));
   }
 
   /**
