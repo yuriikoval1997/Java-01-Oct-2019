@@ -59,7 +59,7 @@ class DP {
                 + "4 = count ways to sum to N\n"
                 + "5 = the longest palindromic sequence\n"
                 + "9 = high or low effort \n"
-                + "12 = ways to tile the floor"
+                + "12 = ways to tile the floor \n"
                 //todo - options
                 + "'back' - to return to the main menu"
         );
