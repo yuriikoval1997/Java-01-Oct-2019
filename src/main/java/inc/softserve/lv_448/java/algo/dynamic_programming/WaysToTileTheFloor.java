@@ -16,7 +16,7 @@ public class WaysToTileTheFloor {
      * @param m m-dimension of the floor
      * @return count[n] number of ways to tile the floor
      */
-    int countWays(int n, int m) {
+    public int countWays(int n, int m) {
         // table to store values
         // of subproblems
         int count[] = new int[n + 1];
