@@ -24,6 +24,7 @@ public class PaintingTheFence implements Startable {
     public void start(ConsoleUtil consoleUtil) {
         long result = countWays(consoleUtil.readInt("Please, enter n-value: "),
                 consoleUtil.readInt("Please, enter k-value: "));
+        consoleUtil.printLongResult(result);
     }
 
     /**
