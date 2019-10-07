@@ -1,29 +1,19 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 import java.util.Scanner;
 
-public class PathWithoutCrossing {
+public class PathWithoutCrossing implements Startable {
 
-    public void run() {
-        System.out.println("Number of crossing paths: " + calculate(input()));
+
+    @Override
+    public void start(ConsoleReader consoleReader){
+        System.out.println("Your result is: " + calculate(consoleReader.readInt("Enter even number")));
     }
 
-    private int input(){
-        int pointCount = 0;
-        String line = null;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number: ");
-
-        try {
-            line = scanner.nextLine();
-            pointCount = Integer.parseInt(line);
-        } catch (NumberFormatException e) {
-            System.out.println("Incorrect number:");
-        }
-        return pointCount;
-    }
-
-    protected int calculate(int pointCount){
+    public int calculate(int pointCount){
         if (pointCount % 2 != 0 || pointCount < 1) {
             return pointCount = 0;
         }
