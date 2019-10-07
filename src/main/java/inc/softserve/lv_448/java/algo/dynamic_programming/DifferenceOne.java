@@ -9,6 +9,8 @@ public class DifferenceOne implements Startable {
 
     @Override
     public void start(ConsoleUtil consoleUtil) {
+        consoleUtil.printResult(longestSubSeq(
+                consoleUtil.readIntegers("Please, enter space separated numbers")));
     }
 
     public static int longestSubSeq(List<Integer> seq){
