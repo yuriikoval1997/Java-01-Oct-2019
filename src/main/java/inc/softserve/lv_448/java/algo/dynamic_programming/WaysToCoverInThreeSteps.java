@@ -4,6 +4,9 @@
 
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 /**
  * This class solving task called "Ways to cover in three steps"
  *
