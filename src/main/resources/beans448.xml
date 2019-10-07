@@ -73,18 +73,18 @@
                 <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.WaysToTileTheFloor</fullyQualifiedName>
             </value>
         </entry>
-<!--        <entry>-->
-<!--            <key>13</key>-->
-<!--            <value>-->
-<!--                <fullyQualifiedName>Painting the fenceVirtual programming lab</fullyQualifiedName>-->
-<!--            </value>-->
-<!--        </entry>-->
-<!--        <entry>-->
-<!--            <key>14</key>-->
-<!--            <value>-->
-<!--                <fullyQualifiedName>Optimized painting fence: use one variable instead of a tableVirtual programming lab</fullyQualifiedName>-->
-<!--            </value>-->
-<!--        </entry>-->
+        <entry>
+            <key>13</key>
+            <value>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.PaintingTheFence</fullyQualifiedName>
+            </value>
+        </entry>
+        <entry>
+            <key>14</key>
+            <value>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.PaintingTheFenceOptimized</fullyQualifiedName>
+            </value>
+        </entry>
         <entry>
             <key>15</key>
             <value>
