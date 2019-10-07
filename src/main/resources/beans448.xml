@@ -28,7 +28,7 @@
         <entry>
             <key>5</key>
             <value>
-                <fullyQualifiedName>Ways to sum to N using array elements with repetition</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -94,7 +94,7 @@
         <entry>
             <key>16</key>
             <value>
-                <fullyQualifiedName>Counting SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.CountingSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -106,7 +106,7 @@
         <entry>
             <key>18</key>
             <value>
-                <fullyQualifiedName>Bucket SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.BucketSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>

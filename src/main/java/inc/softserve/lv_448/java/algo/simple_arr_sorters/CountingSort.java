@@ -1,5 +1,8 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,7 +13,25 @@ import java.util.stream.Stream;
  *
  * @author Oleh Kopylchak
  */
-public class CountingSort implements Sort {
+public class CountingSort implements Sort, Startable {
+
+    /**
+     * Method, that starts sorting
+     *
+     * @param consoleReader object for console input reading
+     */
+    @Override
+    public void start(ConsoleReader consoleReader) {
+        try {
+            int[] array = consoleReader.readIntegers("Please, enter array elements: ").
+                    stream().mapToInt(a -> a).toArray();
+            accept(array);
+
+            System.out.println("Sorted array: \n" + Arrays.toString(array));
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+    }
 
     /**
      * Method for sorting array of integers

@@ -1,5 +1,8 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 import java.util.List;
 
 /**
@@ -8,7 +11,26 @@ import java.util.List;
  *
  * @author Oleh Kopylchak
  */
-public class WaysToSumCounter {
+public class WaysToSumCounter implements Startable {
+
+    /**
+     * Method, that starts counting
+     *
+     * @param consoleReader object for console input reading
+     */
+    @Override
+    public void start(ConsoleReader consoleReader) {
+        try {
+            List<Integer> possibleNumbers = consoleReader.readIntegers("Please, enter possible numbers: ");
+            int n = consoleReader.readInt("Please enter N: ");
+            long result = countWaysToSumToN(possibleNumbers, n);
+
+            System.out.println("Number of ways to sum to " + n + " is: " + result);
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
     /**
      * Method that count ways to sum to n
      *
