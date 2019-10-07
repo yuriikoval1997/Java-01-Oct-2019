@@ -1,14 +1,17 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
 import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
 
-public class LongestPalindromicSequence {
+public class LongestPalindromicSequence implements Startable {
 
-    public int findLengthOfTheLongestPalindrome() {
-        System.out.println("Please, enter a string sequence:");
-        String enteredString = "";
-        ConsoleReader consoleReader = new ConsoleReader();
-        enteredString= consoleReader.readString();
+    @Override
+    public void start(ConsoleReader consoleReader) {
+        String enteredString = consoleReader.readString("Please, input your string sequence: ");
+        findLengthOfTheLongestPalindrome(enteredString);
+    }
+
+    public int findLengthOfTheLongestPalindrome(String enteredString) {
         if (enteredString.isEmpty()) {
             return 0;
         }
