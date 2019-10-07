@@ -1,5 +1,8 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 /**
  * Class for counting possible
  * ways to tile the n x m floor
@@ -7,7 +10,18 @@ package inc.softserve.lv_448.java.algo.dynamic_programming;
  * @version 1.0
  * created on Oct 7, 2019
  */
-public class WaysToTileTheFloor {
+public class WaysToTileTheFloor implements Startable {
+
+    /**
+     * Method starts task flow execution
+     */
+    @Override
+    public void start(ConsoleReader consoleReader) {
+        int result = countWays(consoleReader.readInt("Please, enter n-dimension of the floor: "),
+               consoleReader.readInt("Please, enter m-dimension of the floor: "));
+        System.out.println("The result is " + result);
+    }
+
     /**
      * Method counts possible ways to tile the n x m floor
      * using 1 x m tiles
@@ -40,4 +54,5 @@ public class WaysToTileTheFloor {
         // required number of ways
         return count[n];
     }
+
 }
