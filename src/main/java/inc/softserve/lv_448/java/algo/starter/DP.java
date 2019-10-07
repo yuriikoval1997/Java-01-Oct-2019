@@ -1,9 +1,6 @@
 package inc.softserve.lv_448.java.algo.starter;
 
-import inc.softserve.lv_448.java.algo.dynamic_programming.HighLowEffort;
-import inc.softserve.lv_448.java.algo.dynamic_programming.LongestPalindromicSequence;
-import inc.softserve.lv_448.java.algo.dynamic_programming.DifferenceOne;
-import inc.softserve.lv_448.java.algo.dynamic_programming.WaysToSumCounter;
+import inc.softserve.lv_448.java.algo.dynamic_programming.*;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.Extractor;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.Fibonacci;
 import inc.softserve.lv_448.java.algo.dynamic_programming.sequnences.ModifiedFibonacci;
@@ -41,6 +38,9 @@ class DP {
                     result = new HighLowEffort().
                             getAmountOfCost(consoleReader.readInt(), consoleReader.readIntegers(), consoleReader.readIntegers());
                     break label;
+                case "12":
+                    result = new WaysToTileTheFloor().countWays(consoleReader.readInt(), consoleReader.readInt());
+                    break label;
                 case "back":
                     return;
                 default:
@@ -59,6 +59,7 @@ class DP {
                 + "4 = count ways to sum to N\n"
                 + "5 = the longest palindromic sequence\n"
                 + "9 = high or low effort \n"
+                + "12 = ways to tile the floor"
                 //todo - options
                 + "'back' - to return to the main menu"
         );
