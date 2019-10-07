@@ -50,7 +50,7 @@ class ConsoleUtilTest {
         } catch (AssertionFailedError ignored){
             return;
         }
-        fail();
+        fail("Expected timeout didn't happen. Here is input: " + input);
     }
 
     @Test
@@ -71,7 +71,7 @@ class ConsoleUtilTest {
         } catch (AssertionFailedError ignored){
             return;
         }
-        fail();
+        fail("Expected timeout didn't happen. Here is input: " + input);
     }
 
     @Test
