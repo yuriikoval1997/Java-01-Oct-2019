@@ -1,14 +1,35 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming;
 
+import java.util.ArrayList;
+
 public class HighLowEffort {
 
-    public static int maxEffort(int[] low, int[] high, int days){
-        int[] lookup = new int[days+1];
-        lookup[0] = 0;
-        lookup[1] = high[0];
-        for (int i = 2; i <= days; i++) {
-            lookup[i] = Math.max(lookup[i-1] + low[i-1], lookup[i-2] + high[i-1]);
+    /**
+     * Method counts the maximum amount of cost
+     * that can be performed within given number of days.
+     *
+     * @param numberOfDays    number of days to perform tasks
+     * @param lowEffortTasks  low-effort task costs
+     * @param highEffortTasks high-effort task costs
+     * @return result the maximum amount of cost that can be performed
+     */
+    public static int getAmountOfCost(int numberOfDays, ArrayList<Integer> lowEffortTasks, ArrayList<Integer> highEffortTasks) {
+        int result;
+        ArrayList<Integer> taskEfforts = new ArrayList<>();
+
+        // Assume that there was no task yesterday
+        taskEfforts.add(0);
+
+        // Since there was no task yesterday
+        // set high-effort task on day one
+        taskEfforts.add(highEffortTasks.get(0));
+
+        for (int i = 2; i <= numberOfDays; i++) {
+            taskEfforts.add(i, Math.max(highEffortTasks.get(i - 1) + taskEfforts.get(i - 2),
+                    lowEffortTasks.get(i - 1) + taskEfforts.get(i - 1)));
         }
-        return lookup[days];
+
+        result = taskEfforts.get(numberOfDays);
+        return result;
     }
 }
