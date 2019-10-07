@@ -88,7 +88,7 @@
         <entry>
             <key>15</key>
             <value>
-                <fullyQualifiedName>Insertion SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.InsertionSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -100,7 +100,7 @@
         <entry>
             <key>17</key>
             <value>
-                <fullyQualifiedName>Quick SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.QuickSort</fullyQualifiedName>
             </value>
         </entry>
         <entry>
@@ -112,7 +112,7 @@
         <entry>
             <key>19</key>
             <value>
-                <fullyQualifiedName>Merge SortFile</fullyQualifiedName>
+                <fullyQualifiedName>inc.softserve.lv_448.java.algo.simple_arr_sorters.MergeSort</fullyQualifiedName>
             </value>
         </entry>
     </beanMap>
