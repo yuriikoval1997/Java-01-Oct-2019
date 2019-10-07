@@ -2,6 +2,14 @@ package inc.softserve.lv_448.java.algo.dynamic_programming;
 
 import java.util.ArrayList;
 
+/**
+ * Class for counting the maximum cost
+ * that can be reached withing given amount of days
+ * and specified low- and high-effort task costs.
+ *
+ * @version 1.0
+ * created on Oct 3, 2019
+ */
 public class HighLowEffort {
 
     /**
