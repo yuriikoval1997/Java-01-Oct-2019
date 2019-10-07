@@ -1,5 +1,8 @@
 package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 
+import inc.softserve.lv_448.java.algo.starter.Startable;
+import inc.softserve.lv_448.java.algo.utils.ConsoleReader;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +15,21 @@ import java.util.stream.Stream;
  *
  * @author Oleh Kopylchak
  */
-public class BucketSort implements Sort {
+public class BucketSort implements Sort, Startable {
+
+    /**
+     * Method, that starts sorting
+     *
+     * @param consoleReader object for console input reading
+     */
+    @Override
+    public void start(ConsoleReader consoleReader) {
+        int[] array = consoleReader.readIntegers("Please, enter array elements: ").
+                stream().mapToInt(a -> a).toArray();
+        accept(array);
+
+        System.out.println("Sorted array: \n" + Arrays.toString(array));
+    }
 
     /**
      * Method for sorting arrays of integers using 'Bucket sort' algorithm.
