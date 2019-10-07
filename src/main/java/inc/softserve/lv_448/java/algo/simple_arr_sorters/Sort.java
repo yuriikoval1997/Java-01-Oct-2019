@@ -3,7 +3,6 @@ package inc.softserve.lv_448.java.algo.simple_arr_sorters;
 import inc.softserve.lv_448.java.algo.starter.Startable;
 import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 

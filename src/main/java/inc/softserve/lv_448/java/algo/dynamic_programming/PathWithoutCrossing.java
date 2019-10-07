@@ -15,7 +15,7 @@ public class PathWithoutCrossing implements Startable {
      */
     @Override
     public void start(ConsoleUtil consoleUtil){
-        System.out.println("Your result is: " + calculate(consoleUtil.readInt("Enter even number")));
+        consoleUtil.printResult(calculate(consoleUtil.readInt("Enter even number")));
     }
 
     /**
