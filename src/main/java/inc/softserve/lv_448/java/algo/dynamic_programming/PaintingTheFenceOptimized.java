@@ -35,7 +35,6 @@ public class PaintingTheFenceOptimized implements Startable {
      * @return dp[n] number of ways of painting the fence
      */
     long countWays(int n, int k) {
-        // List of results of subproblems
         // There are k ways to color first post
         long total = k;
         int mod = 1000000007;
