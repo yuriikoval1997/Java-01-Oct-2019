@@ -15,7 +15,7 @@ class WaysToTileTheFloorTest {
     }
 
     @Test
-    void lowOrHighEffort() {
+    void waysToTileTheFloor() {
         int actual;
         int expected = 5;
 
