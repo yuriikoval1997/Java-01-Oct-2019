@@ -1,7 +1,6 @@
 package inc.softserve.lv_448.java.algo.dynamic_programming.sequences;
 
 import inc.softserve.lv_448.java.algo.starter.Startable;
-import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;

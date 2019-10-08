@@ -6,6 +6,7 @@ import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 import java.util.List;
 import java.util.function.Consumer;
 
+@FunctionalInterface
 public interface Sort extends Consumer<int[]>, Startable {
 
     @Override

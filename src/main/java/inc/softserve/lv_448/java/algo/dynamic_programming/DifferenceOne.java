@@ -13,7 +13,7 @@ public class DifferenceOne implements Startable {
                 consoleUtil.readIntegers("Please, enter space separated numbers")));
     }
 
-    public static int longestSubSeq(List<Integer> seq){
+    private static int longestSubSeq(List<Integer> seq){
         int max = 0;
         int count = 1;
         for (int i = 0; i < seq.size() - 1; i++) {

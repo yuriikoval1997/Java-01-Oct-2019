@@ -6,6 +6,7 @@ import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 import java.util.List;
 import java.util.function.IntFunction;
 
+@FunctionalInterface
 public interface SeqGenerator extends IntFunction<List<Integer>>, Startable {
 
     /**

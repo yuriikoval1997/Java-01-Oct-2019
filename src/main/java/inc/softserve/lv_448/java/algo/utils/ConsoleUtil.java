@@ -25,10 +25,6 @@ public class ConsoleUtil implements AutoCloseable{
             System.out.println(message);
             try {
                 String line = bufferedReader.readLine().trim();
-                if (line.equals("exit")){
-                    System.out.println("Thanks for using our program");
-                    System.exit(0);
-                }
                 String[] numbers = line.split(" ");
                 return Stream.of(numbers)
                         .filter(x -> ! x.isEmpty())
@@ -44,9 +40,9 @@ public class ConsoleUtil implements AutoCloseable{
     }
 
     /**
-     * Reads an integer from the console. If NaN appears, the user have to repeat.
-     * If the user types 'exit', the program stops.
-     * @return an integer
+     * This method works until a user inputs an integer. Otherwise, it asks the user to repeat.
+     * @param message - prompt to be shown to a user.
+     * @return - an integer.
      */
     public int readInt(String message){
         while (true){
@@ -63,18 +59,14 @@ public class ConsoleUtil implements AutoCloseable{
     }
 
     /**
-     * If the user types 'exit', the program stops.
-     * @return string read from the console.
+     *
+     * @param message - prompt to be shown to a user.
+     * @return - a user's input as String.
      */
     public String readString(String message) {
         System.out.println(message);
         try {
-            String line = bufferedReader.readLine().trim();
-            if (line.equals("exit")){
-                System.out.println("Thanks for using our program");
-                System.exit(0);
-            }
-            return line;
+            return bufferedReader.readLine().trim();
         } catch (IOException e) {
             System.err.println(e.getMessage());
             throw new RuntimeException(e);
