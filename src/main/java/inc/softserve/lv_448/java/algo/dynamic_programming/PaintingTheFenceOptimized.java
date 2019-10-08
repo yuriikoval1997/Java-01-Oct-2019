@@ -19,8 +19,8 @@ public class PaintingTheFenceOptimized implements Startable {
      */
     @Override
     public void start(ConsoleUtil consoleUtil) {
-        long result = countWays(consoleUtil.readInt("Please, enter n-value: "),
-                consoleUtil.readInt("Please, enter k-value: "));
+        long result = countWays(consoleUtil.readInt("Please, enter number of posts (n): "),
+                consoleUtil.readInt("Please, enter number of colors (k): "));
         consoleUtil.printLongResult(result);
     }
 
@@ -35,7 +35,6 @@ public class PaintingTheFenceOptimized implements Startable {
      * @return dp[n] number of ways of painting the fence
      */
     long countWays(int n, int k) {
-        // List of results of subproblems
         // There are k ways to color first post
         long total = k;
         int mod = 1000000007;

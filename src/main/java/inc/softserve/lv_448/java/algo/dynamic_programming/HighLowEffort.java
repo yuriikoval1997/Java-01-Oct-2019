@@ -21,10 +21,36 @@ public class HighLowEffort implements Startable {
      */
     @Override
     public void start(ConsoleUtil consoleUtil) {
-        int result = getAmountOfCost(consoleUtil.readInt("Please, enter number of days: "),
-                consoleUtil.readIntegers("Please, enter low-effort task values: "),
-                consoleUtil.readIntegers("Please, enter high-effort task values: "));
+        int numberOfDays = consoleUtil.readInt("Please, enter number of days: ");
+        System.out.println("Low Effort Tasks");
+        List<Integer> lowEffortTasks = validateInputArray(consoleUtil, numberOfDays);
+        System.out.println("High Effort Tasks");
+        List<Integer> highEffortTasks = validateInputArray(consoleUtil, numberOfDays);
+        int result = getAmountOfCost(numberOfDays, lowEffortTasks, highEffortTasks);
         consoleUtil.printResult(result);
+    }
+
+    /**
+     * Method validates that number task costs
+     * entered by user is equal to number of days.
+     *
+     * @param consoleUtil utils to retrieve user input
+     * @param numberOfDays number of days to compare with input array size
+     * @return input array with correct amount of task costs
+     */
+    private List<Integer> validateInputArray(ConsoleUtil consoleUtil, int numberOfDays) {
+        boolean isValid = false;
+        List<Integer> input = null;
+        while (!isValid) {
+            input = consoleUtil.readIntegers("Please, enter task costs ("
+                            + numberOfDays +" space separated integers): ");
+            if(input.size() == numberOfDays) {
+                isValid = true;
+            } else {
+                System.out.println("You've entered wrong number of task costs");
+            }
+        }
+        return input;
     }
 
     /**
