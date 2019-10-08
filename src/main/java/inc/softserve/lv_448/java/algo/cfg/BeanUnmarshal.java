@@ -5,11 +5,11 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-public class BeanUnmarshal {
+class BeanUnmarshal {
 
-    public static BeanMap unMarshalingExample() throws JAXBException {
+    static BeanMap unMarshalingExample() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(BeanMap.class);
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-        return (BeanMap) jaxbUnmarshaller.unmarshal( new File("src/main/resources/beans448.xml") );
+        return (BeanMap) jaxbUnmarshaller.unmarshal(new File("src/main/resources/beans448.xml"));
     }
 }

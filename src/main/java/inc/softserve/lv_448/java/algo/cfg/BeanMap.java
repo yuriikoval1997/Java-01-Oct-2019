@@ -9,15 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  
 @XmlRootElement (name="beans")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class BeanMap {
+class BeanMap {
      
-    private Map<Integer, Bean> beanMap = new HashMap<Integer, Bean>();
+    private Map<Integer, Bean> beanMap = new HashMap<>();
  
-    public Map<Integer, Bean> getBeanMap() {
+    Map<Integer, Bean> getBeanMap() {
         return beanMap;
-    }
- 
-    public void setBeanMap(Map<Integer, Bean> beanMap) {
-        this.beanMap = beanMap;
     }
 }

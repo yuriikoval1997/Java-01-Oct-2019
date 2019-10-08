@@ -9,6 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Data
 @XmlRootElement(name = "bean")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Bean {
+class Bean {
     private String fullyQualifiedName;
 }

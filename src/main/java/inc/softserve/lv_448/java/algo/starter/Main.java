@@ -13,11 +13,15 @@ public class Main {
         BeanCreator beanCreator = new BeanCreator();
         beanCreator.initBeans();
         Map<Integer, Startable> container = beanCreator.getContainer();
+        System.out.println("0 = " + "exit");
         container.forEach((k, v) -> System.out.println(k + " = " + v.getClass().getSimpleName()));
         int taskNumber;
         try(ConsoleUtil consoleUtil = new ConsoleUtil(new BufferedReader(new InputStreamReader(System.in)))){
             do {
                 taskNumber = consoleUtil.readInt("Enter task number");
+                if (taskNumber == 0){
+                    break;
+                }
                 if (container.containsKey(taskNumber)){
                     Startable startable = container.get(taskNumber);
                     startable.start(consoleUtil);
@@ -26,5 +30,6 @@ public class Main {
                 }
             } while (true);
         }
+        System.out.println("You'll be back!");
     }
 }
