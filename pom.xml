@@ -93,6 +93,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- ======================= In Java 11 package javax.xml WAS REMOVED from JDK ============================= -->
         <!-- ===================================== JAXB dependencies =============================================== -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
