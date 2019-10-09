@@ -30,7 +30,7 @@ public class WaysToTileTheFloor implements Startable {
      * @param m m-dimension of the floor
      * @return count[n] number of ways to tile the floor
      */
-    public int countWays(int n, int m) {
+    int countWays(int n, int m) {
         // Table of subproblems
         int count[] = new int[n + 1];
         count[0] = 0;
