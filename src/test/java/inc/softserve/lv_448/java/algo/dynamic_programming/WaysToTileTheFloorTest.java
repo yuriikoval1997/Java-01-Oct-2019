@@ -15,12 +15,25 @@ class WaysToTileTheFloorTest {
     }
 
     @Test
-    void waysToTileTheFloor() {
+    void waysToTileTheFloorWith7And4() {
         int actual;
         int expected = 5;
 
         int n = 7;
         int m = 4;
+
+        actual = testClass.countWays(n, m);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void waysToTileTheFloorWith2And3() {
+        int actual;
+        int expected = 1;
+
+        int n = 2;
+        int m = 3;
 
         actual = testClass.countWays(n, m);
 
