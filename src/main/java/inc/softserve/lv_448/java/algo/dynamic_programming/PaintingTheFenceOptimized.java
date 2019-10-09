@@ -32,7 +32,7 @@ public class PaintingTheFenceOptimized implements Startable {
      *
      * @param n number of posts
      * @param k number of colors
-     * @return dp[n] number of ways of painting the fence
+     * @return total number of ways of painting the fence
      */
     long countWays(int n, int k) {
         // There are k ways to color first post
