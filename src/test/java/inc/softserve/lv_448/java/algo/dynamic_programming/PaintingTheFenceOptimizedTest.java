@@ -38,4 +38,16 @@ class PaintingTheFenceOptimizedTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void paintingTheFence30And20() {
+        long actual;
+        long expected = 995320561;
+
+        int n = 30;
+        int k = 20;
+
+        actual = testClass.countWays(n, k);
+        assertEquals(expected, actual);
+    }
+
 }
