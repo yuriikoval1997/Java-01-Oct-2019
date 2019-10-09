@@ -33,7 +33,7 @@ public class PaintingTheFence implements Startable {
      *
      * @param n number of posts
      * @param k number of colors
-     * @return dp[n] number of ways of painting the fence
+     * @return results.get(n) number of ways of painting the fence
      */
     long countWays(int n, int k) {
         // List of results of subproblems
