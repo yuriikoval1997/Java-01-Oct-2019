@@ -35,25 +35,17 @@ public class PaintingTheFenceOptimized implements Startable {
      * @return total number of ways of painting the fence
      */
     long countWays(int posts, int colours) {
-        // There are colours ways to color first post
         long total = colours;
         int mod = 1000000007;
 
-        // There are 0 ways for single post to
-        // violate (same color_ and colours ways to
-        // not violate (different color)
         int same = 0, diff = colours;
 
-        // Fill for 2 posts onwards
         for (int i = 2; i <= posts; i++) {
-            // Current same is same as previous diff
             same = diff;
 
-            // We always have colours-1 choices for next post
             diff = (int) total * (colours - 1);
             diff = diff % mod;
 
-            // Total choices till i.
             total = (same + diff) % mod;
         }
         return total;
