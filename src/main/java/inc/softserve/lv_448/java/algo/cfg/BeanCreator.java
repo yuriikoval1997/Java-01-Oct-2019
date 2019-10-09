@@ -3,12 +3,12 @@ package inc.softserve.lv_448.java.algo.cfg;
 import inc.softserve.lv_448.java.algo.starter.Startable;
 
 import javax.xml.bind.JAXBException;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class BeanCreator {
 
-    private Map<Integer, Startable> container = new HashMap<>();
+    private Map<Integer, Startable> container = new TreeMap<>();
 
     public void initBeans() throws JAXBException {
         BeanUnmarshal.unMarshalingExample().getBeanMap().forEach((k, v) -> {

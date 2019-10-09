@@ -3,30 +3,15 @@ package inc.softserve.lv_448.java.algo.dynamic_programming;
 import inc.softserve.lv_448.java.algo.starter.Startable;
 import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
-/**
- * <p>The next class provides functionality for finding the
- * longest palindromic sequence in a string which was
- * entered by a user
- * @author Yuriy Olkhovskyi
- */
-
 public class LongestPalindromicSequence implements Startable {
 
-    /**
-     * Main method for getting input, calculating and output of result
-     */
     @Override
     public void start(ConsoleUtil consoleUtil) {
         String enteredString = consoleUtil.readString("Please, input your string sequence: ");
         consoleUtil.printResult(findLengthOfTheLongestPalindrome(enteredString));
     }
 
-    /**
-     *
-     * @param enteredString a string which is entered by a user
-     * @return int the length of the longest palindomic sequence
-     */
-    public int findLengthOfTheLongestPalindrome(String enteredString) {
+    int findLengthOfTheLongestPalindrome(String enteredString) {
         if (enteredString.isEmpty()) {
             return 0;
         }
@@ -49,15 +34,6 @@ public class LongestPalindromicSequence implements Startable {
         return longestPalindrome.length();
     }
 
-    /**
-     *
-     * @param enteredString a string which is entered by a user
-     * @param start a start symbol from which comparing is started, it goes left
-     *              comparing a correspond element from the right
-     * @param end an end symbol from which comparing is started, it goes right
-     *      *              comparing a correspond element from the left
-     * @return substring which is the longest palindrome from the symbol its started comparing
-     */
     private String checkIfEqual(String enteredString, int start, int end) {
         while ((start >= 0 && end < enteredString.length()) && (enteredString.charAt(start) == enteredString.charAt(end))) {
             start--;

@@ -28,32 +28,40 @@ public class PaintingTheFence implements Startable {
 
     /**
      * Method counts the number of ways
-     * to paint the fence with n number of posts
-     * and k number of colors
+     * to paint the fence with posts number of posts
+     * and colours number of colors
      *
-     * @param n number of posts
-     * @param k number of colors
-     * @return results.get(n) number of ways of painting the fence
+     * @param posts number of posts
+     * @param colours number of colours
+     * @return results.get(posts) number of ways of painting the fence
      */
-    long countWays(int n, int k) {
-        ArrayList<Long> results = new ArrayList<>(Collections.nCopies(n+1, 0L));
+    long countWays(int posts, int colours) {
+        // List of results of subproblems
+        ArrayList<Long> results = new ArrayList<>(Collections.nCopies(posts+1, 0L));
 
         int mod = 1000000007;
 
-        results.set(1, (long) k);
+        // There are colours ways to color first post
+        results.set(1, (long) colours);
 
-        int same = 0, diff = k;
+        // There are 0 ways for single post to
+        // violate (same color_ and colours ways to
+        // not violate (different color)
+        int same = 0, diff = colours;
 
-        for (int i = 2; i <= n; i++) {
-
+        // Fill for 2 posts onwards
+        for (int i = 2; i <= posts; i++) {
+            // Current same is same as previous diff
             same = diff;
 
-            diff = (int) (results.get(i-1) * (k - 1));
+            // We always have colours-1 choices for next post
+            diff = (int) (results.get(i-1) * (colours - 1));
             diff = diff % mod;
 
+            // Total choices till i.
             results.set(i, (long) ((same + diff) % mod));
         }
 
-        return results.get(n);
+        return results.get(posts);
     }
 }

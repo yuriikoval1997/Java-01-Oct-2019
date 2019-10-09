@@ -29,20 +29,20 @@ public class WaysToCoverInThreeSteps implements Startable{
     /**
      * Method calculateNumberOfWays includes logic to find solution of task
      *
-     * @param n
+     * @param number
      * describes distance entered by user
      *
      * @return
      * returns final solution (number of ways)
      */
-    public int calculateNumberOfWays(int n) {
-        if (n < 0) {
+    int calculateNumberOfWays(int number) {
+        if (number < 0) {
             return 0;
-        } else if (n == 0) {
+        } else if (number == 0) {
             return 1;
-        } else if (n == 2) {
+        } else if (number == 2) {
             return 2;
         }
-        return calculateNumberOfWays(n - 1) + calculateNumberOfWays(n - 2) + calculateNumberOfWays(n - 3);
+        return calculateNumberOfWays(number - 1) + calculateNumberOfWays(number - 2) + calculateNumberOfWays(number - 3);
     }
 }

@@ -26,7 +26,7 @@ public class InterestingRow implements Startable {
      * @param userNumber value entered by user
      * @return number in array at position userNumber.
      */
-    public int findInterestingRowMember(int userNumber) {
+    int findInterestingRowMember(int userNumber) {
 
         if (userNumber < 1) {
             return 0;

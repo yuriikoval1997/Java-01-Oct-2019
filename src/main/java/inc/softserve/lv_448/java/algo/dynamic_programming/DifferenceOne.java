@@ -14,21 +14,21 @@ public class DifferenceOne implements Startable {
     }
 
     private static int longestSubSeq(List<Integer> seq){
-        int max = 0;
+        int maxLength = 0;
         int count = 1;
         for (int i = 0; i < seq.size() - 1; i++) {
             if (Math.abs(seq.get(i) - seq.get(i + 1)) == 1){
                 count++;
             } else {
-                if (count > max){
-                    max = count;
+                if (count > maxLength){
+                    maxLength = count;
                 }
                 count = 1;
             }
         }
-        if (count > max){
-            max = count;
+        if (count > maxLength){
+            maxLength = count;
         }
-        return max;
+        return maxLength;
     }
 }

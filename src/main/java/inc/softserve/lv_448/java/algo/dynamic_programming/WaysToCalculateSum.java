@@ -28,7 +28,7 @@ public class WaysToCalculateSum implements Startable {
      * @param userNumber value entered by user
      * @return maximum combinations of users's number partitions.
      */
-    public int calculateWays(int userNumber) {
+    int calculateWays(int userNumber) {
         if (userNumber < 0) {
             return 1;
         }

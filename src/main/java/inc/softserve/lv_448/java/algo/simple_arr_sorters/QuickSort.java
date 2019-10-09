@@ -17,7 +17,7 @@ public class QuickSort implements Sort {
     }
 
     private int partition(int[] arr, int l, int r) {
-        int m = (l + r)/2;
+        int m = (l + r) / 2;
         int pivot = arr[m];
         while (l < r){
             while (arr[l] < pivot){

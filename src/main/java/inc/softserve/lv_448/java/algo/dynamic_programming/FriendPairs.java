@@ -5,8 +5,6 @@ import inc.softserve.lv_448.java.algo.utils.ConsoleUtil;
 
 /**
  * Class find out the total number of ways in which friends can remain single or can be paired up
- *
- * @author Vitaliy Dzen
  */
 public class FriendPairs implements Startable {
 

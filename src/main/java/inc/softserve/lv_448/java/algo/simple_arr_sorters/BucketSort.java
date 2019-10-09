@@ -60,8 +60,8 @@ public class BucketSort implements Sort, Startable {
     private List<int[]> formBuckets(final int[] array) {
         List<List<Integer>> buckets;
         int bucketsNumb;
-        int max = Arrays.stream(array).max().getAsInt();
-        int min = Arrays.stream(array).min().getAsInt();
+        int max = Arrays.stream(array).max().orElseThrow(() -> new RuntimeException("Given arrays is empty"));
+        int min = Arrays.stream(array).min().orElseThrow(() -> new RuntimeException("Given arrays is empty"));
 
         if (array.length < 4) {                             // if array.length < 4 sqrt() = 1 and cause infinity recursion
             bucketsNumb = 2;
@@ -75,11 +75,11 @@ public class BucketSort implements Sort, Startable {
 
         List<Integer> currentBucket;
         int bucketIndex;
-        for (int i = 0; i < array.length; i++) {
-            bucketIndex = msBits(array[i], bucketsNumb, min, max);
+        for (int value : array) {
+            bucketIndex = msBits(value, bucketsNumb, min, max);
             currentBucket = buckets.get(bucketIndex);
 
-            currentBucket.add(array[i]);
+            currentBucket.add(value);
         }
 
         return convertToArrBuckets(buckets);
@@ -95,8 +95,8 @@ public class BucketSort implements Sort, Startable {
     private List<int[]> convertToArrBuckets(final List<List<Integer>> buckets) {
         List<int[]> converted = new ArrayList<>();
 
-        for (int i = 0; i < buckets.size(); i++) {
-            converted.add(buckets.get(i).stream().mapToInt(a -> a).toArray());
+        for (List<Integer> bucket : buckets) {
+            converted.add(bucket.stream().mapToInt(a -> a).toArray());
         }
 
         return converted;
