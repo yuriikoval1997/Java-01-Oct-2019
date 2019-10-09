@@ -35,7 +35,6 @@ public class WaysToTileTheFloor implements Startable {
         int[] count = new int[n + 1];
         count[0] = 0;
 
-        // Fill the table upto value n
         for (int i = 1; i <= n; i++) {
             if (i > m) {
                 count[i] = count[i - 1] + count[i - m];
