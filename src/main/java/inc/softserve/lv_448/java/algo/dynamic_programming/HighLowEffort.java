@@ -66,6 +66,14 @@ public class HighLowEffort implements Startable {
         int result;
         ArrayList<Integer> taskEfforts = new ArrayList<>();
 
+        if(numberOfDays < 1) {
+            return 0;
+        }
+
+        if(numberOfDays == 1) {
+            return highEffortTasks.get(0);
+        }
+
         // Assume that there was no task yesterday
         taskEfforts.add(0);
 
