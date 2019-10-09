@@ -25,7 +25,7 @@ public class PathWithoutCrossing implements Startable {
      * @return The number of ways to connect point without crossing.
      */
     int calculate(int pointCount){
-        if (pointCount % 2 != 0 && pointCount < 1) {
+        if (pointCount % 2 != 0 || pointCount < 1) {
             return 0;
         }
         pointCount = pointCount / 2;
